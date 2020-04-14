@@ -1,7 +1,8 @@
 import React from 'react';
+import { World } from '@/pages/index';
 
 const App = () => {
-  return <div />;
+  return <World />;
 };
 
 export default App;
