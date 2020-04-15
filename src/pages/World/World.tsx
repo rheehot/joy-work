@@ -1,8 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { WorldContent } from '@/components/World/index';
+import { WorldContent, WorldAdd, WorldSearch } from '@/components/World/index';
 import useMount from '@/hooks/useMount';
 import worldThunk from '@/features/world/worldThunk';
+import { Layout } from '@/styles/layout';
 
 const World = () => {
   const dispatch = useDispatch();
@@ -12,9 +13,11 @@ const World = () => {
   });
 
   return (
-    <>
+    <Layout>
+      <WorldAdd />
+      <WorldSearch />
       <WorldContent />
-    </>
+    </Layout>
   );
 };
 
