@@ -24,4 +24,13 @@ const Th = styled(Td)`
   border-color: white;
 `;
 
-export { Table, Tr, Td, Th };
+const Button = styled.button`
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+`;
+
+export { Table, Tr, Td, Th, Button };
