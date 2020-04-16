@@ -24,7 +24,7 @@ const WorldAdd = () => {
           ref={register({ required: true })}
         />
       ))}
-      <button type="submit">??</button>
+      <button type="submit">추가</button>
     </S.Form>
   );
 };
