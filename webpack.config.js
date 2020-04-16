@@ -7,6 +7,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.resolve(__dirname, '/dist'),
+    writeToDisk: true,
     inline: true,
     hot: true,
     host: 'localhost',
@@ -27,6 +28,11 @@ module.exports = {
         test: /\.tsx?$/,
         use: ['babel-loader', 'ts-loader'],
         exclude: /node_modules/,
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules[\/\\](?!(react-hook-form)[\/\\])/,
       },
     ],
   },
